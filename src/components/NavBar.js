@@ -7,14 +7,11 @@ export default function NavBar() {
     <nav>
       <img src="/iNailLogo.png" />
       <div>
-        <Link href="/" className={router.pathname === "/" ? "active" : ""}>
-          Home
+        <Link href="/" legacyBehavior>
+          <a className={router.pathname === "/" ? "active" : ""}>Home</a>
         </Link>
-        <Link
-          href="/about"
-          className={router.pathname === "/about" ? "active" : ""}
-        >
-          About
+        <Link href="/about" legacyBehavior>
+          <a className={router.pathname === "/about" ? "active" : ""}>About</a>
         </Link>
       </div>
       <style jsx>{`
